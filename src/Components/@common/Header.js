@@ -14,59 +14,49 @@ const Header = () => {
   const classes = useStyle()
 
   return (
-    <Container className={classes.container}>
-      <Box className={classes.firstBox}>
-          <Box className={classes.box1box}>
-            <Typography className={classes.text}>
-              Monday-Friday: 9: 00 AM - 5.30 PM
-            </Typography>
-            <Typography className={classes.text}>
-              Visit our showroom in 1234 Street Adress City Address, 1234 "Contact Us"
-            </Typography>
-            <Box className={classes.box1boxItem}>
-              <Typography className={classes.text}> 
-                Call Us: (00) 1234 5678 
+    <Container className={classes.root}>
+      <AppBar position="static" className={classes.appBar}>
+        <Box className={classes.headerTopWrapper}>
+          <Box className={classes.headerTop}>
+            <Toolbar className={classes.toolbar}>
+              <Typography className={classes.headerText}>
+                Monday-Friday: 9: 00 AM - 5.30 PM
               </Typography>
-                <FacebookIcon className={classes.icon}/>
-                <InstagramIcon className={classes.icon}/>
-            </Box>
+            </Toolbar>
+            <Toolbar className={classes.toolbar}>
+              <Typography className={classes.headerText}>
+                Visit our showroom in 1234 Street Adress City Address, 1234
+              </Typography>
+              <Button className={classes.headerBtn}>"Contact Us"</Button>
+            </Toolbar>
+            <Toolbar className={classes.toolbar}>
+              <Typography className={classes.headerText}>
+                Call Us: (00) 1234 5678
+              </Typography>
+              <FacebookIcon />
+              <InstagramIcon />
+            </Toolbar>
           </Box>
-      </Box> 
-      <Box className={classes.box2}>
-        <AppBar position="" className={classes.appBar}>
+        </Box>
+
+        <Box className={classes.headerBottom}>
           <Toolbar className={classes.Toolbar}>
             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
               <img alt="Logo" src={Logo}/>
             </IconButton>
-            <Typography variant="h6" className={classes.title}>
-              Laptops
-            </Typography>
-            <Typography variant="h6" className={classes.title}>
-              Desktop Pc
-            </Typography>
-            <Typography variant="h6" className={classes.title}>
-              Networking Device 
-            </Typography>
-            <Typography variant="h6" className={classes.title}>
-              Printing & Scanning
-            </Typography>
-            <Typography variant="h6" className={classes.title}>
-              PC Parts
-            </Typography>
-            <Typography variant="h6" className={classes.title}>
-              All Other Products
-            </Typography>
-            <Typography variant="h6" className={classes.title}>
-              Repairs
-            </Typography>
-            <Button className={`${classes.Btn} ${classes.title}`} >Our Deals</Button>
-            <div>
-              <Button className={`${classes.Btn} ${classes.Login}`}color="inherit">Login</Button>
-            </div>
           </Toolbar>
-        </AppBar>
-        
-      </Box>
+          <Toolbar className={classes.ToolbarMid}>
+            <Button className={classes.Button}>Home</Button>
+            <Button className={classes.Button}>About Us</Button>
+            <Button className={classes.Button}>Products</Button>
+            <Button className={classes.Button}>Our Help</Button>
+          </Toolbar>
+          <Toolbar className={classes.Toolbar}>
+            <Button className={classes.login}>Login</Button>
+          </Toolbar>
+        </Box>
+
+      </AppBar>   
     </Container>
     
   )
@@ -74,72 +64,72 @@ const Header = () => {
 }
 
 const useStyle = makeStyles((theme) => ({
-    container: {
-        display: 'block',
-        maxWidth: '100%',
-        margin: 0,
-        padding: 0,
-        height: 136,
+    root: {
+      maxWidth: '100%',
+      margin: 0,
+      padding: 0,
+      height: 136,
     },
-    Toolbar: {
-      justifyContent: "space-evenly"
-
-    },
-    firstBox: {
-        backgroundColor: '#020202',
-        minHeight: 44,
-        width: '100%',
-    },
-    box1box: {
-      maxWidth: 1398,
-      display: 'flex',
-      justifyContent: 'space-between',
-      color: '#FFFFFF',
-      margin: 'auto',
-      padding: 10      
-    },
-    box1boxItem: {
-      display: 'flex',
-    },
-    text: {
-      lineHeight: '18px', 
-      fontSize: 12,
-      alignSelf: 'center',
-    },
-    icon: {
-      fontSize: '1.5ram',
-      marginLeft: '8px',
-
-    },
-    box2: {
-      maxWidth: 1398,
-      margin: 'auto'
-    },
-
     appBar: {
       backgroundColor: '#FFF',
       color: '#000',
       boxShadow: 'none',
-    },
-    Login: {
+      alignItems: 'center',
+      borderBottom: 'solid 1px lightskyblue',
 
     },
-    Btn: {
-      border: 'solid 2px blue',
-      fontWeight: "bold",
-      borderRadius: '50px',
+    headerTopWrapper: {
+      width: '100%',
+      display: 'flex',
+      justifyContent: 'center',
+      backgroundColor: '#000',
+      color: '#FFFFFF'
     },
-    root: {
+    headerTop:{
+      height: 40,
+      display: 'flex',
+      justifyContent: 'space-between',
+      width: '100%',
+      maxWidth: 1280
+    },
+    toolbar: {
+      minHeight: 20,
+    },
+    headerText: {
+      fontSize: 12,
 
     },
-    menuButton: {
-      
+    headerBtn: {
+      textDecoration: 'underline',
+      color: '#FFFFFF',
     },
-    title: {
-      fontSize: 14,
-      lineHeight: '21px',
-      marginRight: 25, 
+
+    headerBottom: {
+      display: 'flex',
+      justifyContent: 'space-between',
+      width: '100%',
+      maxWidth: 1280,
     },
+    Toolbar: {
+      height: 80,
+    },
+    ToolbarMid: {
+      width: "65%",
+      display: 'flex',
+      justifyContent: 'space-around',
+      flexWrap: 'wrap',
+    },
+    login: {
+      border: 'solid 2px skyblue',
+      borderRadius: 25,
+      width: 80,
+
+    },
+    Button: {
+      borderRadius: 25,
+      width: 100,
+    }
+
 }))
 
 export default Header;
