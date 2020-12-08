@@ -3,6 +3,7 @@ import { Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Home from './Components/Home/Home'
 import Header from './Components/@common/Header'
+import Footer from "./Components/@common/Footer";
 
 function App() {
   const classes = useStyle()
@@ -18,9 +19,9 @@ function App() {
             <Home />
             <Home />
           </Route>
-
         </Switch>
       </Router>
+      <Footer />
     </Container>
   );
 }

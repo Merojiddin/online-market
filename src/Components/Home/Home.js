@@ -62,7 +62,7 @@ const Home = () => {
 
       <Box className={classes.wrapperWhite}>
         <Box className={classes.section}>
-        <CardMedia component="img" className={classes.picture} src={Planshet}/>
+          <CardMedia component="img" className={classes.picture} src={Planshet}/>
           <Box variant="h4" className={classes.boxWhite}>
             <Typography className={classes.title} >
               A Family That Keeps On Growing
@@ -93,7 +93,7 @@ const Home = () => {
 
       <Box className={classes.wrapperWhite}>
         <Box className={classes.section}>
-        <CardMedia component="img" className={classes.picture} src={Planshet}/>
+          <CardMedia component="img" className={classes.picture} src={Planshet}/>
           <Box variant="h4" className={classes.boxWhite}>
             <Typography className={classes.title} >
               A Family That Keeps On Growing
@@ -121,24 +121,27 @@ const useStyle = makeStyles(() => ({
 
   },
   wrapper: {
-    margin: 0,
     width: '100%',
-    padding: '96px 0 96px',
-    backgroundColor: 'black'
+    padding: '96px 0px 96px',
+    backgroundColor: 'black',
+    display: 'flex',
+    justifyContent: 'center',
+
   },
   section: {
     maxWidth: 1280,
     width: '100%',
-    margin: 'auto',
+    margin: '0px 20px',
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'space-around'
+    justifyContent: 'space-evenly'
   },
   box: {
     width: 465,
     color: 'white',
     alignSelf: 'center',
     marginBottom: 30,
+    marginRight: 20,
 
   },
   title: {
@@ -158,16 +161,18 @@ const useStyle = makeStyles(() => ({
     height: 488,
   },
   wrapperWhite: {
-    margin: 0,
     width: '100%',
     padding: '96px 0 96px',
     backgroundColor: 'white',
+    display: 'flex',
+    justifyContent: 'center',
   },
   boxWhite: {
     color: 'black',
     width: 465,
     alignSelf: 'center',
     marginBottom: 30,
+    marginLeft: 20,
   }
   
   
