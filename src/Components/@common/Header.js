@@ -8,7 +8,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 
-import Logo from '../../Assets/images/logo.svg'
+import Logo from '../../Assets/images/deluxe.jpg'
 
 const Header = () => {
   const classes = useStyle()
@@ -42,7 +42,7 @@ const Header = () => {
         <Box className={classes.headerBottom}>
           <Toolbar className={classes.Toolbar}>
             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-              <img alt="Logo" src={Logo}/>
+              <img alt="Logo" src={Logo} className={classes.logo}/>
             </IconButton>
           </Toolbar>
           <Toolbar className={classes.ToolbarMid}>
@@ -98,6 +98,10 @@ const useStyle = makeStyles((theme) => ({
     headerText: {
       fontSize: 12,
 
+    },
+    logo: {
+      width: 70,
+      height: 60
     },
     headerBtn: {
       textDecoration: 'underline',

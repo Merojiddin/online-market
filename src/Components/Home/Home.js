@@ -1,12 +1,15 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import { Box, Button, Container, Typography } from '@material-ui/core';
+import { Box, Typography } from '@material-ui/core';
 import CardMedia from '@material-ui/core/CardMedia';
-import StarSharpIcon from '@material-ui/icons/StarSharp';
 
 
-import head from '../../Assets/images/home/first.png'
 import Planshet from '../../Assets/images/home/smth.png'
+import Door1 from '../../Assets/images/home/door1.jpg'
+import Door2 from '../../Assets/images/home/door2.jpg'
+import Door3 from '../../Assets/images/home/door3.jpg'
+import Door4 from '../../Assets/images/home/door4.jpg'
+import Door5 from '../../Assets/images/home/door5.jpg'
 
 
 const Home = () => {
@@ -25,13 +28,13 @@ const Home = () => {
               Shop management approach fosters a strong customer service focus in our staff. We prefer to cultivate long-term client relationships rather than achieve quick sales, demonstrated in the measure of our long-term success.
             </Typography>
           </Box>
-          <CardMedia component="img" className={classes.picture} src={Planshet}/>
+          <CardMedia component="img" className={classes.picture} src={Door3}/>
         </Box>
       </Box>
 
       <Box className={classes.wrapperWhite}>
         <Box className={classes.section}>
-        <CardMedia component="img" className={classes.picture} src={Planshet}/>
+        <CardMedia component="img" className={classes.picture} src={Door4}/>
           <Box variant="h4" className={classes.boxWhite}>
             <Typography className={classes.title} >
               A Family That Keeps On Growing
@@ -56,13 +59,13 @@ const Home = () => {
               Shop management approach fosters a strong customer service focus in our staff. We prefer to cultivate long-term client relationships rather than achieve quick sales, demonstrated in the measure of our long-term success.
             </Typography>
           </Box>
-          <CardMedia component="img" className={classes.picture} src={Planshet}/>
+          <CardMedia component="img" className={classes.picture} src={Door5}/>
         </Box>
       </Box>
 
       <Box className={classes.wrapperWhite}>
         <Box className={classes.section}>
-          <CardMedia component="img" className={classes.picture} src={Planshet}/>
+          <CardMedia component="img" className={classes.picture} src={Door1}/>
           <Box variant="h4" className={classes.boxWhite}>
             <Typography className={classes.title} >
               A Family That Keeps On Growing
@@ -87,7 +90,7 @@ const Home = () => {
               Shop management approach fosters a strong customer service focus in our staff. We prefer to cultivate long-term client relationships rather than achieve quick sales, demonstrated in the measure of our long-term success.
             </Typography>
           </Box>
-          <CardMedia component="img" className={classes.picture} src={Planshet}/>
+          <CardMedia component="img" className={classes.picture} src={Door2}/>
         </Box>
       </Box>
 
