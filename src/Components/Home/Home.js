@@ -1,23 +1,15 @@
+import { Box, Container, makeStyles, Typography, CardMedia } from '@material-ui/core';
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles';
-import { Box, Typography } from '@material-ui/core';
-import CardMedia from '@material-ui/core/CardMedia';
-
-
-import Planshet from '../../Assets/images/home/smth.png'
-import Door1 from '../../Assets/images/home/door1.jpg'
-import Door2 from '../../Assets/images/home/door2.jpg'
-import Door3 from '../../Assets/images/home/door3.jpg'
-import Door4 from '../../Assets/images/home/door4.jpg'
-import Door5 from '../../Assets/images/home/door5.jpg'
-
+import ProfilePicture from '../../Assets/images/Profile.jpg'
 
 const Home = () => {
   const classes = useStyle();
+
   return (
-    <div className={classes.container}>
-      <Box className={classes.wrapper}>
+    <div className={classes.root}>
+      <Container className={classes.container}>
         <Box className={classes.section}>
+          <CardMedia component="img" className={classes.picture} src={ProfilePicture}/>
           <Box variant="h4" className={classes.box}>
             <Typography className={classes.title} >
               A Family That Keeps On Growing
@@ -28,113 +20,24 @@ const Home = () => {
               Shop management approach fosters a strong customer service focus in our staff. We prefer to cultivate long-term client relationships rather than achieve quick sales, demonstrated in the measure of our long-term success.
             </Typography>
           </Box>
-          <CardMedia component="img" className={classes.picture} src={Door3}/>
         </Box>
-      </Box>
-
-      <Box className={classes.wrapperWhite}>
-        <Box className={classes.section}>
-        <CardMedia component="img" className={classes.picture} src={Door4}/>
-          <Box variant="h4" className={classes.boxWhite}>
-            <Typography className={classes.title} >
-              A Family That Keeps On Growing
-            </Typography>
-            <Typography variant="overline" className={classes.text}>
-              We always aim to please the home market, supplying great computers and hardware at great prices to non-corporate customers, through our large Melbourne CBD showroom and our online store.
-              <br /><br />
-              Shop management approach fosters a strong customer service focus in our staff. We prefer to cultivate long-term client relationships rather than achieve quick sales, demonstrated in the measure of our long-term success.
-            </Typography>
-          </Box>
-        </Box>
-      </Box>
-      <Box className={classes.wrapper}>
-        <Box className={classes.section}>
-          <Box variant="h4" className={classes.box}>
-            <Typography className={classes.title} >
-              A Family That Keeps On Growing
-            </Typography>
-            <Typography variant="overline" className={classes.text}>
-              We always aim to please the home market, supplying great computers and hardware at great prices to non-corporate customers, through our large Melbourne CBD showroom and our online store.
-              <br /><br />
-              Shop management approach fosters a strong customer service focus in our staff. We prefer to cultivate long-term client relationships rather than achieve quick sales, demonstrated in the measure of our long-term success.
-            </Typography>
-          </Box>
-          <CardMedia component="img" className={classes.picture} src={Door5}/>
-        </Box>
-      </Box>
-
-      <Box className={classes.wrapperWhite}>
-        <Box className={classes.section}>
-          <CardMedia component="img" className={classes.picture} src={Door1}/>
-          <Box variant="h4" className={classes.boxWhite}>
-            <Typography className={classes.title} >
-              A Family That Keeps On Growing
-            </Typography>
-            <Typography variant="overline" className={classes.text}>
-              We always aim to please the home market, supplying great computers and hardware at great prices to non-corporate customers, through our large Melbourne CBD showroom and our online store.
-              <br /><br />
-              Shop management approach fosters a strong customer service focus in our staff. We prefer to cultivate long-term client relationships rather than achieve quick sales, demonstrated in the measure of our long-term success.
-            </Typography>
-          </Box>
-        </Box>
-      </Box>
-      <Box className={classes.wrapper}>
-        <Box className={classes.section}>
-          <Box variant="h4" className={classes.box}>
-            <Typography className={classes.title} >
-              A Family That Keeps On Growing
-            </Typography>
-            <Typography variant="overline" className={classes.text}>
-              We always aim to please the home market, supplying great computers and hardware at great prices to non-corporate customers, through our large Melbourne CBD showroom and our online store.
-              <br /><br />
-              Shop management approach fosters a strong customer service focus in our staff. We prefer to cultivate long-term client relationships rather than achieve quick sales, demonstrated in the measure of our long-term success.
-            </Typography>
-          </Box>
-          <CardMedia component="img" className={classes.picture} src={Door2}/>
-        </Box>
-      </Box>
-
-      <Box className={classes.wrapperWhite}>
-        <Box className={classes.section}>
-          <CardMedia component="img" className={classes.picture} src={Planshet}/>
-          <Box variant="h4" className={classes.boxWhite}>
-            <Typography className={classes.title} >
-              A Family That Keeps On Growing
-            </Typography>
-            <Typography variant="overline" className={classes.text}>
-              We always aim to please the home market, supplying great computers and hardware at great prices to non-corporate customers, through our large Melbourne CBD showroom and our online store.
-              <br /><br />
-              Shop management approach fosters a strong customer service focus in our staff. We prefer to cultivate long-term client relationships rather than achieve quick sales, demonstrated in the measure of our long-term success.
-            </Typography>
-          </Box>
-        </Box>
-      </Box>
-
-
+      </Container>
     </div>
   )
 }
 
 const useStyle = makeStyles(() => ({
-  container: {
-    width: '100%',
-    padding: 0,
-    marginTop: 50,
-    margin: 0,
-
+  root: {
+    width: '100%'
   },
-  wrapper: {
-    width: '100%',
-    padding: '96px 0px 96px',
-    backgroundColor: 'black',
-    display: 'flex',
-    justifyContent: 'center',
-
+  container: {
+    backgroundColor: "black",
+    width: '100%'
   },
   section: {
-    maxWidth: 1280,
+    maxWidth: '1280px',
     width: '100%',
-    margin: '0px 20px',
+    margin: '30px auto',
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-evenly'
@@ -163,22 +66,6 @@ const useStyle = makeStyles(() => ({
     width: 470,
     height: 488,
   },
-  wrapperWhite: {
-    width: '100%',
-    padding: '96px 0 96px',
-    backgroundColor: 'white',
-    display: 'flex',
-    justifyContent: 'center',
-  },
-  boxWhite: {
-    color: 'black',
-    width: 465,
-    alignSelf: 'center',
-    marginBottom: 30,
-    marginLeft: 20,
-  }
-  
-  
 }))
 
 export default Home;

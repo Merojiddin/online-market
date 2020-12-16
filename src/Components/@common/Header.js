@@ -7,7 +7,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-
+import { Link } from 'react-router-dom';
 import Logo from '../../Assets/images/deluxe.jpg'
 
 const Header = () => {
@@ -20,18 +20,18 @@ const Header = () => {
           <Box className={classes.headerTop}>
             <Toolbar className={classes.toolbar}>
               <Typography className={classes.headerText}>
-                Monday-Friday: 9: 00 AM - 5.30 PM
+                Dushanba - Juma : 9:00 AM - 9:00 PM
               </Typography>
             </Toolbar>
             <Toolbar className={classes.toolbar}>
               <Typography className={classes.headerText}>
-                Visit our showroom in 1234 Street Adress City Address, 1234
+                Eski tashmi, Yangi zavod, Delux Doors
               </Typography>
               <Button className={classes.headerBtn}>"Contact Us"</Button>
             </Toolbar>
             <Toolbar className={classes.toolbar}>
               <Typography className={classes.headerText}>
-                Call Us: (00) 1234 5678
+                Tell: +998 (93) 607-09-09
               </Typography>
               <FacebookIcon />
               <InstagramIcon />
@@ -45,10 +45,19 @@ const Header = () => {
               <img alt="Logo" src={Logo} className={classes.logo}/>
             </IconButton>
           </Toolbar>
+
           <Toolbar className={classes.ToolbarMid}>
-            <Button className={classes.Button}>Home</Button>
+            <Link to="/" style={{ textDecoration: 'none' }}>
+              <Button className={classes.Button}>
+                Home
+              </Button>
+            </Link>
             <Button className={classes.Button}>About Us</Button>
-            <Button className={classes.Button}>Products</Button>
+              <Link to="/products" style={{ textDecoration: 'none' }}>
+                <Button className={classes.Button}>
+                  Products
+                </Button>
+              </Link>
             <Button className={classes.Button}>Our Help</Button>
           </Toolbar>
           <Toolbar className={classes.Toolbar}>
